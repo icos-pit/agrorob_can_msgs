@@ -11,6 +11,28 @@ find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+
+
+
+set(msg_files
+  "msg/EngineState.msg"
+  "msg/FailureState.msg"
+  "msg/ModeControl.msg"
+  "msg/RobotControl.msg"
+  "msg/RobotState.msg"
+  "msg/SprayerControl.msg"
+  "msg/ToolControl.msg"
+  "msg/ToolState.msg"
+)
+
+rosidl_generate_interfaces(${PROJECT_NAME} 
+  ${msg_files}
+)
+
+# ament_export_dependencies(rosidl_default_generators)
+# ament_export_dependencies(rosidl_default_runtime)
+# ament_export_include_directories(include)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -24,4 +46,5 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
+ament_export_dependencies(rosidl_default_runtime)
 ament_package()
