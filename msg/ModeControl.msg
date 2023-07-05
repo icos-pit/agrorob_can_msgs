@@ -1,6 +1,6 @@
 bool stop_drivers                  # ID100/1 - 0-inactive; 1-STOP of all drives active
 bool stop_engine                   # ID100/1 - 0 - the internal combustion engine can work; 1 - engine shutdown
-bool auto_mode_enabled
+bool auto_mode_enabled             # ID100/1 - 0 - manual mode; 1 - automatic mode
 
 float64 ref_engine_idle_speed_rpm       # ID1: 0 - 255 (255 means 2550 rpm)
 bool engine_commissioning               # ID1: 0 - inactive; 1 - ignition of the internal combustion engine
