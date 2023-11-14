@@ -25,6 +25,7 @@ set(msg_files
   "msg/ToolControl.msg"
   "msg/ToolState.msg"
   "msg/RemoteState.msg"
+  "msg/Logs.msg"
 )
 
 rosidl_generate_interfaces(${PROJECT_NAME} 
